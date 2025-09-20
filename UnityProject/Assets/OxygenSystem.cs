@@ -78,16 +78,19 @@ public class OxygenSystem : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //only continue if the collider is tagged Base- this avoids confusion with other colliders
+        if (other.CompareTag("Base"))
+        {
+            inBase = true; //player is inside of base
 
-        inBase = true; //player is inside of base
+            //elapsed time stops being added to since this marks their journey time so the timer is just updated in the base to show the time
+            int minutes = (int)(elapsedTime / 60);
+            int seconds = (int)(elapsedTime % 60);
 
-        //elapsed time stops being added to since this marks their journey time so the timer is just updated in the base to show the time
-        int minutes = (int)(elapsedTime / 60); 
-        int seconds = (int)(elapsedTime % 60); 
-
-        //Updating the timer text in canvas
-        if (TimerText != null) //If timer text is not empty then do the following
-            TimerText.text = minutes.ToString("00") + ":" + seconds.ToString("00"); //formatting
+            //Updating the timer text in canvas
+            if (TimerText != null) //If timer text is not empty then do the following
+                TimerText.text = minutes.ToString("00") + ":" + seconds.ToString("00"); //formatting
+        }
     }
 
     //other is the object collided with
