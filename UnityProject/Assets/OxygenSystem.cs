@@ -20,7 +20,7 @@ public class OxygenSystem : MonoBehaviour
     public TextMeshProUGUI TimerText; //refernce for timer text in canvas
 
     //Timer Reference
-    private float elapsedTime = 0f; //time passed (doesn't need to be changed in inspector)
+    public float elapsedTime = 0f; //time passed (doesn't need to be changed in inspector)
 
     private bool inBase = false; //tracks if player is inside the base trigger- the bool lets its be a true or false variable
 
