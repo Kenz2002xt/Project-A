@@ -13,7 +13,7 @@ public class OxygenSystem : MonoBehaviour
     //Oxygen settings
     public float maxOxygen = 100f; //maximum oxygen the player can have
     public float currentOxygen; //current oxygen of player
-    public float oxygenDepletionRate = 2f; //the amount of oxygen lost per second
+    public float oxygenDepletionRate = 0.8f; //the amount of oxygen lost per second
 
     //UI Refrences 
     public Slider OxygenBar; //reference for Oxygen Slider in canvas

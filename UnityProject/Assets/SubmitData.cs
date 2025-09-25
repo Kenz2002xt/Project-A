@@ -8,6 +8,13 @@ public class SubmitData : MonoBehaviour
 
     private bool playerInRange = false; //will keep track if the player is inside of the trigger zone
 
+    public AudioClip submitSound; //sound to play when a player submits the data
+    private AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>(); //will get the audio source attached to the game object
+    }
 
     // Update is called once per frame
     void Update()
@@ -32,7 +39,11 @@ public class SubmitData : MonoBehaviour
             Debug.Log("Submitted Data. Research: " + research.ResearchPoints + " Time: " + timer.elapsedTime);
         }
 
-        Debug.Log("Play Audio: Data submitted"); //will add audio later
+       if (audioSource != null && submitSound != null)
+        {
+            audioSource.PlayOneShot(submitSound); //plays sound once as long as audio source and the sound are found
+            Debug.Log("Audio played- data submitted");
+        }
     }
 
     private void OnTriggerEnter(Collider other)
