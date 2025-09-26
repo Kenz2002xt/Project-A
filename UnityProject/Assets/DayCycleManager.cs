@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 //Code configured with inspiration from "Ending the Game" tutorial by Unity Learn highlighting fade mechanics- repurposed for specific game use
 public class DayCycleManager : MonoBehaviour
@@ -44,11 +45,16 @@ public class DayCycleManager : MonoBehaviour
             if (research != null) research.ResetResearchPoints();
 
             if (currentDay < maxDays) //as long as the player isnt at the max, move to the next day
+            {
                 currentDay = currentDay + 1;
-
-            ShowDayText(); //show message for next day
-
-            Invoke("HideBlackPanel", 2f);
+                ShowDayText(); //show message for next day
+                Invoke("HideBlackPanel", 2f);
+            } 
+            else //if player goes over max then go to game over for completion 
+            {
+                GameOverSummary.endMessage = "Expediton Complete"; 
+                SceneManager.LoadScene("GameOver");
+            }
         }
     }
 

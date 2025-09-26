@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 
 
@@ -55,7 +56,8 @@ public class OxygenSystem : MonoBehaviour
             //Game over if oxygen reaches 0- will add more game over logic later
             if (currentOxygen == 0)
             {
-                Debug.Log("Oxygen is 0. Game over!");
+                GameOverSummary.endMessage = "Died of Low Oxygen";
+                SceneManager.LoadScene("GameOver"); //switch to the game over scene
             }
 
             //Timer
