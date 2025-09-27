@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
+//SCRIPT IS FROM IMPORTED FIRST PERSON CONTROLLER MADE BY SIMON SERGE PASi ON UNITY ASSESTS
 public class FirstPersonMovement : MonoBehaviour
 {
     public float speed = 5;

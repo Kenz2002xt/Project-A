@@ -1,5 +1,5 @@
 using UnityEngine;
-
+//SCRIPT IS FROM IMPORTED FIRST PERSON CONTROLLER MADE BY SIMON SERGE PASi ON UNITY ASSESTS
 public class Crouch : MonoBehaviour
 {
     public KeyCode key = KeyCode.LeftControl;

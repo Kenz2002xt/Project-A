@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using UnityEngine;
-
+//SCRIPT IS FROM IMPORTED FIRST PERSON CONTROLLER MADE BY SIMON SERGE PASi ON UNITY ASSESTS
 public class FirstPersonAudio : MonoBehaviour
 {
     public FirstPersonMovement character;

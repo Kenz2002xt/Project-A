@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+//SCRIPT IS FROM IMPORTED FIRST PERSON CONTROLLER MADE BY SIMON SERGE PASi ON UNITY ASSESTS
+
 
 [ExecuteInEditMode]
 public class GroundCheck : MonoBehaviour

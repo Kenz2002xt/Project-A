@@ -8,7 +8,7 @@ using Unity.VisualScripting;
 public class ResearchItem : MonoBehaviour
 {
 
-    public TextMeshProUGUI PromptText; //this is the "Press E to Collect" text
+    public TextMeshProUGUI PromptText; //this is the "Press E to Collect" text  
     private bool NearPlayer = false; //bool check if the player is close enough. NearPlayer is a variable used to keep track later in the code
 
 
