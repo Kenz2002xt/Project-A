@@ -1,4 +1,3 @@
-using UnityEditor.PackageManager;
 using UnityEngine;
 
 //utilizing a static class so the script doesn't require a game object and be accessed from anywhere
